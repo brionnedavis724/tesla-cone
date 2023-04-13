@@ -1,4 +1,5 @@
 * {
+  border: blue;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   color: #393c41;
@@ -8,4 +9,8 @@
 
 body {
   width: 100%;
+}
+
+Header {
+  border: yellow;
 }
