@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+// import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
   return (
@@ -11,11 +12,16 @@ function Header() {
             <img src="/images/logo.svg" alt="" />
         </a>
         <Menu>
-            <p><a href="#">Model S</a></p>
-            <p><a href="#">Model 3</a></p>
-            <p><a href="#">Model X</a></p>
-            <p><a href="#">Model Y</a></p>
+            <a href="#">Model S</a>
+            <a href="#">Model 3</a>
+            <a href="#">Model X</a>
+            <a href="#">Model Y</a>
         </Menu>
+        <RightMenu>
+            <a href="#">Shop</a>
+            <a href="#">Tesla Account</a>
+            <CustomMenu></CustomMenu>
+        </RightMenu>
     </Container>
   )
 }
@@ -24,21 +30,43 @@ export default Header
 
 const Container = styled.div`
     border: 2px solid red;
+    // make header full witdth of container
+    top: 0;
+    left: 0;
+    right: 0;
     min-height: 60px;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
+
+    div {
+        // background-color: white;
+    }
     `
 
 const Menu = styled.div`
     display: flex;
     align-items: center;
-    p {
+    justify-content: center;
+    flex: 1;
+
+    a {
         font-weight: 600;
         text-transform: uppercase;
         padding: 0 10px;
-        flex-wrap: no-wrap;
+        flex-wrap: nowrap;
     }
 `
+
+const RightMenu = styled.div`
+    a {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+`
+
+// const CustomMenu = styled(MenuIcon)``
+const CustomMenu = styled.div``
